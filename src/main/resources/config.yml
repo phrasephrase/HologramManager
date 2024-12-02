@@ -1,0 +1,17 @@
+prefix: "&b&l[>>] "
+isAPlayer: "&cВы не являетесь игроком!"
+usage: "&6Использование: &e/hologrammanager spawn|remove"
+id: "&cУкажите айди!"
+reload: "&aПлагин успешно перезагружен!"
+
+message:
+  spawn:
+      usage: "&6Использование: &e/hologrammanager spawn <айди> <строки>"
+      alreadyExists: "&cУказанный айди уже существует"
+  remove:
+      usage: "&6Использование: &e/hologrammanager remove <айди>"
+      doesNoExists: "&cУказанный айди не существует"
+
+settings:
+  distance: 0.3
+  separator: "-"

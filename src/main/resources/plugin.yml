@@ -1,0 +1,7 @@
+name: HologramManager
+version: '1.0'
+main: phrase.hologramManager.Plugin
+api-version: '1.18'
+
+commands:
+    hologrammanager: {}
