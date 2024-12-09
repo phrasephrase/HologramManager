@@ -59,7 +59,7 @@ public class HologramManagerCMD implements CommandExecutor {
                 return true;
             }
 
-            if(Hologram.getHolograms().containsKey(id)) {
+            if(Hologram.holograms.containsKey(id)) {
                 ChatUtil.sendMessage(player, Plugin.getInstance().getConfig().getString("message.spawn.alreadyExists"));
                 return true;
             }
@@ -77,7 +77,7 @@ public class HologramManagerCMD implements CommandExecutor {
             }
 
             Hologram hologram = new Hologram(player.getLocation(), lines);
-            Hologram.getHolograms().put(id, hologram);
+            Hologram.holograms.put(id, hologram);
 
             final int finalId = id;
             new BukkitRunnable() {
@@ -125,7 +125,7 @@ public class HologramManagerCMD implements CommandExecutor {
                 return true;
             }
 
-            if(!Hologram.getHolograms().containsKey(id)) {
+            if(!Hologram.holograms.containsKey(id)) {
                 ChatUtil.sendMessage(player, Plugin.getInstance().getConfig().getString("message.remove.doesNoExists"));
                 return true;
             }

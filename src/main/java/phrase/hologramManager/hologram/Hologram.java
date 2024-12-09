@@ -12,10 +12,10 @@ import java.util.Map;
 
 public class Hologram {
 
-    private static Map<Integer, Hologram> holograms = new HashMap<>();
-    private Location location;
-    private List<String> lines;
-    private List<ArmorStand> armorStands = new ArrayList<>();
+    public static final Map<Integer, Hologram> holograms = new HashMap<>();
+    private final Location location;
+    private final List<String> lines;
+    private final List<ArmorStand> armorStands = new ArrayList<>();
 
     public Hologram(Location location, List<String> lines) {
         this.location = location;
@@ -28,7 +28,7 @@ public class Hologram {
 
         for(int i = 0; i < holograms.size(); i++) {
 
-            if(!getHolograms().containsKey(i)) {
+            if(!holograms.containsKey(i)) {
                 continue;
             }
 
@@ -47,7 +47,7 @@ public class Hologram {
 
     public static void remove(int id) {
 
-        Hologram hologram = getHolograms().get(id);
+        Hologram hologram = holograms.get(id);
         List<ArmorStand> armorStands = hologram.getArmorStands();
 
         for(ArmorStand armorStand : armorStands) {
@@ -94,11 +94,11 @@ public class Hologram {
         return location;
     }
 
-    public List<ArmorStand> getArmorStands() {
-        return armorStands;
+    public List<String> getLines() {
+        return lines;
     }
 
-    public static Map<Integer, Hologram> getHolograms() {
-        return holograms;
+    public List<ArmorStand> getArmorStands() {
+        return armorStands;
     }
 }

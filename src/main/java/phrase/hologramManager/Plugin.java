@@ -49,7 +49,7 @@ public final class Plugin extends JavaPlugin {
             Location location = config.getLocation(key + ".location");
 
             Hologram hologram = new Hologram(location, lines);
-            Hologram.getHolograms().put(
+            Hologram.holograms.put(
                     Integer.parseInt(key),
                     hologram
             );
